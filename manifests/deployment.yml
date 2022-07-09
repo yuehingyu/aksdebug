@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: yuehingyuaksdebug 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: yuehingyuaksdebug
+  template:
+    metadata:
+      labels:
+        app: yuehingyuaksdebug 
+    spec:
+      containers:
+        - name: yuehingyuaksdebug 
+          image: yycontainerregistry2022.azurecr.io/yuehingyuaksdebug
+          ports:
+          - containerPort: 80
