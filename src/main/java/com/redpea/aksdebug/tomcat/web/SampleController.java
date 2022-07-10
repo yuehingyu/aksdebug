@@ -36,4 +36,12 @@ public class SampleController {
 		System.out.println(msg);
 		return msg;
 	}
+	
+	@RequestMapping("/customer")
+	@ResponseBody
+	public String ThelloWorld() {
+		String msg=this.helloWorldService.getHelloMessage()+" to customer";
+		System.out.println(msg);
+		return msg;
+	}
 }
