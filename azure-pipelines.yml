@@ -15,7 +15,8 @@ variables:
   imageRepository: 'yuehingyuaksdebug'
   containerRegistry: 'yycontainerregistry2022.azurecr.io'
   dockerfilePath: '**/Dockerfile'
-  tag: '$(Build.BuildId)'
+  # hard code to avoid storing too many version in Azure ACR tag: '$(Build.BuildId)'
+  tag: 'V1.0'
   imagePullSecret: 'yycontainerregistry202266375e4e-auth'
 
   # Agent VM image name
