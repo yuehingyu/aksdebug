@@ -1,7 +1,9 @@
 apiVersion : apps/v1
 kind: Deployment
 metadata:
-  name: yuehingyuaksdebug 
+  name: aksdebug-deployment
+  labels:
+    app: yuehingyuaksdebug
 spec:
   replicas: 1
   selector:
@@ -16,4 +18,4 @@ spec:
         - name: yuehingyuaksdebug 
           image: yycontainerregistry2022.azurecr.io/yuehingyuaksdebug
           ports:
-          - containerPort: 80
+          - containerPort: 8080
