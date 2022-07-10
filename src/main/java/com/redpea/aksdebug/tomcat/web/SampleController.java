@@ -33,7 +33,7 @@ public class SampleController {
 	@ResponseBody
 	public String helloWorld() {
 		String msg=this.helloWorldService.getHelloMessage();
-		System.out.printf(msg);
+		System.out.println(msg);
 		return msg;
 	}
 }
